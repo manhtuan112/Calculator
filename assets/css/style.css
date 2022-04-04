@@ -1,0 +1,155 @@
+body.dark-mode {
+  background-color: #0f0f0f;
+  color: #c2c2c2;
+}
+body.dark-mode .main {
+  background-color: #151515;
+}
+body.dark-mode .main #calc {
+  color: #ffffff5e;
+}
+body.dark-mode .main .appMode {
+  background-color: #fff;
+}
+body.dark-mode .main .appMode i {
+  color: #c6c60f;
+}
+body.dark-mode .main .key-container {
+  background-color: #1a1a1a;
+}
+body.dark-mode .main .key:hover {
+  background-color: #2f2f2f;
+  box-shadow: 0 0 0 5px #2f2f2f;
+}
+body.dark-mode .main .key__lighten {
+  color: #ffffff5e;
+}
+body.dark-mode .main .key__lighten:hover {
+  color: #ffffffb4;
+}
+
+body.light-mode {
+  background-color: #ebebeb;
+}
+body.light-mode .main {
+  background-color: #fafafa;
+  color: #1a1a1a;
+}
+body.light-mode .main #calc {
+  color: #3a3a3a;
+}
+body.light-mode .main .appMode {
+  background-color: #6228282d;
+}
+body.light-mode .main .appMode i {
+  color: #277abd;
+}
+body.light-mode .main .key-container {
+  background-color: #dee0d7;
+}
+body.light-mode .main .key-container .key:hover {
+  background-color: #ebebeb;
+  box-shadow: 0 0 0 5px #cfcfcf2d;
+}
+body.light-mode .main .key-container .key__lighten {
+  color: #1a1a1a69;
+}
+body.light-mode .main .key-container .key__lighten:hover {
+  color: #1a1a1acc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+body {
+  transition: all 0.2s ease-in;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  position: relative;
+  width: 350px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #ff3c39;
+}
+.main .appTitle {
+  align-self: center;
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+.main .appTitle span {
+  color: #ff3c39;
+  font-size: 20px;
+}
+.main .appTitle .appMode {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  padding: 5px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.main .appTitle .appMode i {
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.main .result-container {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main .result-container #calc {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+.main .result-container #result {
+  font-size: 40px;
+}
+.main .key-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+.main .key-container .row {
+  display: flex;
+}
+.main .key-container .row .key {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 100%;
+  user-select: none;
+  transition: all 0.3s;
+}
+.main .key-container .row .key#division, .main .key-container .row .key#multiply, .main .key-container .row .key#sum, .main .key-container .row .key#sub {
+  color: #ff3c39;
+}
+.main .key-container .row .key#equal {
+  background-color: #ff3c39;
+  color: #fff;
+  box-shadow: 0 0 5px 5px #ff403948;
+}
+
+/*# sourceMappingURL=style.css.map */

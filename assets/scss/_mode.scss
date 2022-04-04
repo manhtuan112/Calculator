@@ -1,0 +1,87 @@
+@import "./color";
+
+body.dark-mode {
+    background-color: $bg--dark;
+    color: $text-color--dark;
+
+
+
+
+    .main {
+        background-color: $bg-calc--dark;
+
+        #calc {
+            color: $text-color-calc--dark;
+        }
+
+
+        .appMode{
+            background-color: #fff;
+            i{
+                color: #c6c60f;
+            }
+        }
+
+        .key-container {
+            background-color: $bg-key-container--dark;
+
+
+
+        }
+
+        .key {
+            &:hover {
+                background-color: #2f2f2f;
+                box-shadow: 0 0 0 5px #2f2f2f;
+            }
+
+            &__lighten {
+                color: $lighten-dark;
+
+                &:hover {
+                    color: #ffffffb4;
+                }
+            }
+        }
+    }
+}
+
+body.light-mode {
+    background-color: $bg-light;
+
+    .main {
+        background-color: $bg-calc--light;
+        color: $text-color--light;
+
+        #calc {
+            color: $text-color-calc--light;
+        }
+
+        .appMode{
+            background-color: #6228282d;
+            i{
+                color: rgb(39, 122, 189);;
+            }
+        }
+
+        .key-container {
+            background-color: $bg-key-container--light;
+
+            .key {
+                &:hover {
+                    background-color: #ebebeb;
+                    box-shadow: 0 0 0 5px #cfcfcf2d;
+                }
+
+                &__lighten {
+                    color: $lighten-light;
+
+                    &:hover {
+                        color: #1a1a1acc;
+                    }
+                }
+            }
+
+        }
+    }
+}
