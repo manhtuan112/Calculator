@@ -1,3 +1,37 @@
+// Change mode
+const changeMode = document.querySelector('.appMode')
+const mode = document.querySelector('body')
+
+const myMode = localStorage.getItem('myMode');
+if(myMode){
+    mode.classList.add(myMode)
+} else{
+    mode.classList.add('light-mode')
+    localStorage.setItem('myMode', 'light-mode')
+}
+
+const changeModeFuc = () =>{
+    if(mode.classList.contains('dark-mode')){
+        mode.classList.toggle('dark-mode')
+        mode.classList.add('light-mode')
+        localStorage.setItem('myMode', 'light-mode')
+        changeMode.innerHTML = '<i class="fa-solid fa-moon"></i>'
+        
+    }
+    else{
+        mode.classList.toggle('light-mode')
+        mode.classList.add('dark-mode')
+        localStorage.setItem('myMode', 'dark-mode')
+        changeMode.innerHTML = '<i class="fa-solid fa-sun"></i>'
+    }
+
+}
+
+
+changeMode.addEventListener('click', changeModeFuc)
+
+
+
 const numberKey = document.querySelectorAll(".numberKey")
 const operatorKey = document.querySelectorAll(".operatorKey")
 const calc = document.getElementById('calc')
@@ -35,7 +69,7 @@ const getOperator = (operator) => {
 }
 
 const setResult = () => {
-    res.innerHTML = Math.round((eval(calcResult)+Number.EPSILON)*1000000000) / 1000000000
+    res.innerHTML = Math.round((eval(calcResult)+Number.EPSILON)*10**9) / 10**9
 }
 
 const clearAll = () => {
@@ -54,13 +88,13 @@ const backSpace = () => {
 
 const getEqual = () => {
     if(eval(calcResult) !== Infinity){
-        resultStr = Math.round((eval(calcResult)+Number.EPSILON)*1000000000) / 1000000000
+        resultStr = Math.round((eval(calcResult)+Number.EPSILON)*10**9) / 10**9
         calcArray = []
         for(let i = 0; i<resultStr.length; i++){
             calcArray.push(resultStr.charAt(i))
         }
-        calcResult = Math.round((eval(calcResult)+Number.EPSILON)*1000000000) / 1000000000
-        calc.innerHTML = Math.round((eval(calcResult)+Number.EPSILON)*1000000000) / 1000000000
+        calcResult = Math.round((eval(calcResult)+Number.EPSILON)*10**9) / 10**9
+        calc.innerHTML = Math.round((eval(calcResult)+Number.EPSILON)*10**9) / 10**9
     }
 }
 
@@ -83,25 +117,3 @@ backSpaceKey.addEventListener('click', backSpace)
 equalKey.addEventListener('click', getEqual)
 
 
-const changeMode = document.querySelector('.appMode')
-const mode = document.querySelector('body')
-
-
-const changeModeFuc = () =>{
-    if(mode.classList.contains('dark-mode')){
-        mode.classList.toggle('dark-mode')
-        mode.classList.add('light-mode')
-        changeMode.innerHTML = '<i class="fa-solid fa-moon"></i>'
-        
-    }
-    else{
-        mode.classList.toggle('light-mode')
-        mode.classList.add('dark-mode')
-        
-        changeMode.innerHTML = '<i class="fa-solid fa-sun"></i>'
-    }
-
-}
-
-
-changeMode.addEventListener('click', changeModeFuc)
