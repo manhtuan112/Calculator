@@ -71,7 +71,7 @@ const getOperator = (operator) => {
 }
 
 const setResult = () => {
-    res.innerHTML = Math.round((eval(calcResult)+Number.EPSILON)*10**9) / 10**9
+    res.innerHTML = (eval(calcResult)!==Infinity && !Number.isNaN(eval(calcResult))) ? Math.round((eval(calcResult)+Number.EPSILON)*10**9) / 10**9 : 'Error Value'
 }
 
 const clearAll = () => {
@@ -89,7 +89,7 @@ const backSpace = () => {
 }
 
 const getEqual = () => {
-    if(eval(calcResult) !== Infinity){
+    if(eval(calcResult) !== Infinity || eval(calcResult) !== NaN){
         resultStr = Math.round((eval(calcResult)+Number.EPSILON)*10**9) / 10**9
         calcArray = []
         for(let i = 0; i<resultStr.length; i++){
