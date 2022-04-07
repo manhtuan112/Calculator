@@ -12,7 +12,7 @@ if(myMode){
 
 const changeModeFuc = () =>{
     if(mode.classList.contains('dark-mode')){
-        console.log('darkmode')
+        
         mode.classList.toggle('dark-mode')
         mode.classList.add('light-mode')
         localStorage.setItem('myMode', 'light-mode')
@@ -20,7 +20,7 @@ const changeModeFuc = () =>{
         
     }
     else{
-        console.log('lightmode')
+        
         mode.classList.toggle('light-mode')
         mode.classList.add('dark-mode')
         localStorage.setItem('myMode', 'dark-mode')

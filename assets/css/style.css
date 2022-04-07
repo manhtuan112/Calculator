@@ -112,11 +112,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .main .result-container #calc {
   font-size: 17px;
-  margin-bottom: 20px;
 }
 .main .result-container #result {
   font-size: 40px;
@@ -150,6 +149,25 @@ body {
   background-color: #ff3c39;
   color: #fff;
   box-shadow: 0 0 5px 5px #ff403948;
+}
+
+@media screen and (max-width: 739px) {
+  .main {
+    width: 100%;
+    height: 100vh;
+  }
+  .main .key-container {
+    align-items: normal;
+    flex: 1;
+  }
+  .main .key-container .row {
+    flex: 1;
+  }
+  .main .key-container .row .key {
+    flex: 1;
+    height: 100%;
+    border-radius: 100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
