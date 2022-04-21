@@ -15,9 +15,10 @@ body.dark-mode {
         }
 
 
-        .appMode{
+        .appMode {
             background-color: #fff;
-            i{
+
+            i {
                 color: #c6c60f;
             }
         }
@@ -30,17 +31,25 @@ body.dark-mode {
         }
 
         .key {
-            &:hover {
-                background-color: #2f2f2f;
-                box-shadow: 0 0 0 5px #2f2f2f;
+
+            @media (hover: hover) {
+                &:hover {
+                    background-color: #2f2f2f;
+                    box-shadow: 0 0 0 5px #2f2f2f;
+                }
             }
+
 
             &__lighten {
                 color: $lighten-dark;
 
-                &:hover {
-                    color: #ffffffb4;
+                @media (hover : hover) {
+                    &:hover {
+                        color: #ffffffb4;
+                    }
                 }
+
+
             }
         }
     }
@@ -57,10 +66,12 @@ body.light-mode {
             color: $text-color-calc--light;
         }
 
-        .appMode{
+        .appMode {
             background-color: #6228282d;
-            i{
-                color: rgb(39, 122, 189);;
+
+            i {
+                color: rgb(39, 122, 189);
+                ;
             }
         }
 
